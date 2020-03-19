@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+body{
+    /* 초기화 영역 */
+    margin: 0;
+    padding: 0;
+    /* 배경 지정 */
+    background: #34495e;
+    
+    /* 
+    vh
+    높이 지정 : vh는 Viewport Height의 약자로 1vh는 Viewport 높이의 1%와 같다
+    예를들어 가로 1200px 세로 1000px의 경우 100vh는 10px이다(100분의 1)
+    */
+    height: 100vh;
+    
+    /* 
+    display: flex
+    flex박스의 경우 어떤 방향에든 위치할 수 있고 동적으로 변경가능한 순서를 지정할 수도 있다.
+    */
+    display: flex;
+    
+    /* 
+    align-items: center
+    flex 요소를 세로선상에서 정렬하는데 사용한다
+    */
+    align-items: center;
+
+    /* justify-content: center
+    flex 요소를 가로선상에서 정렬하는데 사용한다
+    */
+    justify-content: center;
+
+    /* 
+    font-family: 폰트 지정
+    */
+    font-family: "montseerat",sans-serif;
+}
+.loading{
+    /* 가로/세로 넓이 */
+    width: 200px;
+    height: 200px;
+    
+    /*  box-sizing: border-box
+    박스크기를 어떤것으로 기준으로 할지 정하는 속성으로 box-sizing: border-box 는 테두리기준으로 크기를 정한다.
+    */
+    box-sizing: border-box;
+
+    /* 테두리를 둥글게 만드는 속성 */
+    border-radius: 50%;
+
+    /* 테두리를 설정하는 속성으로  top에 10px만큼 테두리를 설정해라 라는 뜻이다.*/
+    border-top: 10px solid #e74c3c;
+
+    /* .loading > span의 absolute를 위한 부모 relative 선언 */
+    position: relative;
+    /* 
+    정의한 에니메이션 a1을 2초동안 일정한 속도로 무한정 움직인다 라는 뜻이다. 
+    */
+    animation: a1 2s linear infinite;
+}
+
+    /* 
+    가상요소 , 콘텐츠 시작전에 생성된 콘텐츠 추가 : before 
+    콘텐츠 끝부분에 생성된 컨텐츠 추가 : after
+    */
+.loading::before, .loading::after{
+    /* 비어있는 컨텐츠 */
+    content: '';
+    /* 크기조절 / 위 .loading 클래스와 동일하게 사이즈 설정 */
+    width: 200px;
+    height: 200px;
+    /* absolute로 절대 위치 고정 */
+    position: absolute;
+    /* 왼쪽으로 딱 붙게 */
+    left: 0;
+    /* 위쪽으로 -10px 내려오게 */
+    top: -10px;
+    /* 위 설명과 동일 */
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.loading::before{
+    /* 색 지정 */
+    border-top: 10px solid #e67e22;
+
+    /* 요소를 회전시킨다. 1바퀴 돌리는 것이 360deg 이다. 
+    그럼 120deg 는 120도 돌리는 것이다. (양수는 시계방향 , 음수는 반시계 방향)
+    */
+    transform: rotate(120deg);
+}
+
+.loading::after{
+    /* 위 설명과 동일 */
+    border-top: 10px solid #3498db;
+    transform: rotate(240deg);
+}
+.loading span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    animation: a2 2s linear infinite;
+}
+
+/* 애니메이션 정리 양수는 시계방향으로 1바귀 돌린다.(360deg기준) */
+@keyframes a1 {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes a2 { // 반기게언ㅇㄴ
+    to{
+        transform: rotate(-360deg);
+    }
+}

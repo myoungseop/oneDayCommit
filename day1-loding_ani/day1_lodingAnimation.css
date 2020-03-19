@@ -67,15 +67,20 @@ body{
 .loading::before, .loading::after{
     /* 비어있는 컨텐츠 */
     content: '';
+
     /* 크기조절 / 위 .loading 클래스와 동일하게 사이즈 설정 */
     width: 200px;
     height: 200px;
+
     /* absolute로 절대 위치 고정 */
     position: absolute;
+
     /* 왼쪽으로 딱 붙게 */
     left: 0;
+
     /* 위쪽으로 -10px 내려오게 */
     top: -10px;
+    
     /* 위 설명과 동일 */
     box-sizing: border-box;
     border-radius: 50%;

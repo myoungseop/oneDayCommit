@@ -112,7 +112,7 @@ body{
         transform: rotate(360deg);
     }
 }
-@keyframes a2 { // 반기게언ㅇㄴ
+@keyframes a2 { 
     to{
         transform: rotate(-360deg);
     }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    /*
+       while문으로 5단 출력
+    */
+    var i = 1;
+    while(i <= 9){
+      document.write("5X" + i + "=" + 5 * i + "<br />");
+      i++;
+    }
+
+    /*
+        do ~ while문으로 5단 출력
+    */
+    do{
+      document.write("5X" + i + "=" + 5 * i + "<br />");
+      i++;
+    }while(i <= 9)
+
+    /*
+        for문으로 5단 출력
+    */
+    for(var i = 1; i <= 9; i++){
+      document.write("5X" + i + "=" + 5 * i + "<br />");
+    }
+
+
+    /*
+        for문으로 구구단 출력
+    */
+
+    for(var i = 2 ; i <= 9 ; i++){
+      for(var j = 1 ; j <= 9 ; j++){
+        document.write(i + "X" + j + "=" + i*j + "<br />");
+      }
+    }
+
+
+    /*
+        while 문으로 구구단 출력
+    */
+
+    var i = 2;
+    while(i <= 9){
+      var j = 1;
+      while(j <= 9){
+        document.write(i + "X" + j + "=" + i*j + "<br />");
+        j++;
+      }
+      i++;
+    }
+
+    /*
+        do~while 문으로 구구단 출력
+    */
+    var i = 2;
+    var j = 1;
+    do{
+      do{
+        document.write(i + "X" + j + "=" + i*j + "<br />");
+        j++;
+      }while(j <= 9)
+      i++;
+      j=1;
+    }while(i <=9)
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

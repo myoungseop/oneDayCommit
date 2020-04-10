@@ -1,0 +1,49 @@
+body{
+  font-family: Helvetica;
+}
+.logo{
+  width: 165px;
+  height: 58px;
+  margin: 80px auto 0;
+}
+.logo > a{
+  display: block;
+}
+.logo > a > img{
+  width: 100%;
+}
+.gnb{
+  width: 400px;
+  margin: 0 auto;
+}
+.gnb > ul{
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 60px 0;
+}
+.gnb > ul > li{
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+.gnb > ul > li:nth-child(-n+3){
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.gnb > ul > li > a{
+  font-size: 16px;
+  color: #58595B;
+  text-decoration: none;
+  display: block;
+}
+.bold{
+  font-weight: bold;
+}
+.img-area{
+  width: 90%;
+  margin: 0 auto;
+}
+.img-area > img{
+  width: 100%;
+}
